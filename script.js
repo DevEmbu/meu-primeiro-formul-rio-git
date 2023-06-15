@@ -1,11 +1,14 @@
 const convertButton = document.querySelector(".convert-button")
 const currencySelect = document.querySelector(".currency-select")
+const currencySelectNacional = document.querySelector(".currency-select-nacional")
 
 function convertValues() {
     const inputCurrencyValues = document.querySelector(".input-currency").value
     const currencyValuesToConvert = document.querySelector(".currency-national") //valor do  real brasileiro
     const currencyValueConverted = document.querySelector(".international-currency")//valor moeda internacional
+             
 
+        const realday = 1.0
         const dolartoday = 5.2 
         const euroToday = 6.2
         const pesoToday = 4.5
@@ -26,7 +29,7 @@ function convertValues() {
                 currencyValueConverted.innerHTML = new Intl.NumberFormat("es-IS", { style:"currency", currency:"ILS" }).format(inputCurrencyValues / shekelIsraelense)
             }
             currencyValuesToConvert.innerHTML = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(inputCurrencyValues)
-                
+                       
         }                    
 
 function changeCurrency() {
@@ -51,6 +54,23 @@ function changeCurrency() {
             currencyImage.src = "./assets/shekel-israelense.png"
         }
         convertValues()
+
+}
+
+
+
+function convertValuesNacional() {
+    const inputCurrencyValues = document.querySelector(".input-currency").value
+    const currencyValuesToConvert = document.querySelector(".currency-national") //valor do  real brasileiro
+    const currencyValueConverted = document.querySelector(".international-currency")//valor moeda internacional
+             
+        
+        const realToday = 1.0
+        const dolartoday = 5.2 
+        const euroToday = 6.2
+        const pesoToday = 4.5
+        const shekelIsraelense = 6.1
+
 
 }
 
